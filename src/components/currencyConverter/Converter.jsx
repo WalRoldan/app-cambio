@@ -50,6 +50,7 @@ const Converter = () => {
           onChange={(value) => setAmount(value >= 0 ? value : 1.0)}
         />
         <Dropdown
+          htmlFor={"fromCurrency"}
           label="From"
           options={currencyOptions}
           value={fromCurrency}
@@ -64,6 +65,7 @@ const Converter = () => {
           </button>
         </div>
         <Dropdown
+          htmlFor={"toCurrency"}
           className="lg:ml-[-50%] lg:pr-[50%]"
           label="To"
           options={currencyOptions}

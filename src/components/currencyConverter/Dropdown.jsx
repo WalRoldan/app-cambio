@@ -1,8 +1,10 @@
 import React from "react";
 
-const Dropdown = ({ label, options, value, onChange, className }) => (
+const Dropdown = ({ label, options, value, onChange, className, htmlFor }) => (
   <div className={`flex flex-col ${className}`}>
-    <label className="text-gray-600 text-sm mb-1">{label}</label>
+    <label htmlFor={htmlFor} className="text-gray-600 text-sm mb-1">
+      {label}
+    </label>
     <select
       className="border rounded-md p-2 text-gray-800"
       value={value}

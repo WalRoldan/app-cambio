@@ -13,6 +13,6 @@ export const formatDate = () => {
   }).format(now);
 };
 export const generateCurrencyLink = (currencyCode, currencyName) =>
-  `https://www.xe.com/currency/${currencyCode.toLowerCase()}-${formatCurrencyName(
+  `https://www.xe.com/currency/${currencyCode?.toLowerCase()}-${formatCurrencyName(
     currencyName
   )}/`;

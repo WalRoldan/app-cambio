@@ -11,10 +11,12 @@ const AmountInput = ({ value, onChange }) => (
         type="number"
         min="0"
         step="0.01"
-        value={value === 0 ? "" : value}
+        value={value === 0 || value === "" ? "" : value}
         onChange={(e) => {
           const inputValue = e.target.value;
-          onChange(inputValue === "" ? "" : parseFloat(inputValue) || 0);
+          const parsedValue =
+            inputValue === "" ? "" : parseFloat(inputValue) || 0;
+          onChange(parsedValue);
         }}
         className="border rounded-md p-2 pl-8 text-gray-800 w-full"
       />
